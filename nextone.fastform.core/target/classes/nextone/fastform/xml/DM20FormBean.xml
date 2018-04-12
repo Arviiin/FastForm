@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormBean
+FormBeanName="nextone.master.DM20FormBean" >
+	<formId>stuId</formId>
+	<formDesc>学生设定自动生成版本AAAAAAAA</formDesc>
+	<fields>
+		<field fieldType="StudentBean" connectType="EntityBean" connectpath="nextone.master.bean.StudentBean"
+		connectXmlPath="src/main/java/nextone/fastform/xml/StudentBean.xml">studentBean</field>
+	</fields>
+</FormBean>

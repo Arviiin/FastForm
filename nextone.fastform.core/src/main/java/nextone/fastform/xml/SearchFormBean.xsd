@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<xs:schema xmlns="http://www.coderli.com/shurnim" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.coderli.com/shurnim" elementFormDefault="qualified">
+	<xs:element name="SearchFormBean">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="crudPgmCd" type="xs:string" />
+				<xs:element name="entityBean" type="xs:string" />
+			</xs:sequence>
+			<xs:attribute name="SearchFormname" type="xs:string" />
+			<xs:attribute name="connectionXmlPath" type="xs:string" />
+			<xs:attribute name="searchformbeanxmlpath" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

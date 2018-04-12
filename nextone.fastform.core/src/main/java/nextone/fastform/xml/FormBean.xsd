@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.pfu.cn"
+xmlns="http://www.pfu.cn"
+elementFormDefault="qualified">
+	<xs:element name="FormBean">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="formId" type="xs:string" />
+				<xs:element name="formDesc" type="xs:string" />
+				<xs:element name="fields">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="field" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="fieldType" type="xs:string" />
+									<xs:attribute name="connectType" type="xs:string" />
+									<xs:attribute name="connectpath" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Formname" type="xs:string" />
+			<xs:attribute name="formbeanxmlpath" type="xs:string" />
+			<xs:attribute name="connectType" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+ 

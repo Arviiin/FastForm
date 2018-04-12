@@ -1,0 +1,1 @@
+<#if !compon.nullable>NOT NULL</#if>,

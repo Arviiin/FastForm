@@ -1,0 +1,1 @@
+@Column(name="${"${compon.fieldDBName}"?upper_case}",

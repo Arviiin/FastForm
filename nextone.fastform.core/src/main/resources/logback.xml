@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="5 seconds">
+
+	<!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
+	<property name="LOG_HOME" value="log" />
+
+	<jmxConfigurator />
+	<!-- 控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<!-- 按照每天生成日志文件 -->
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- <file>${LOG_HOME}/nextone-mstms.log</file> -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--日志文件输出的文件名 -->
+			<fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<!--日志文件保留天数 -->
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<!--格式化输出,%d:日期;%thread:线程名;%-5level：级别,从左显示5个字符宽度;%msg:日志消息;%n:换行符 -->
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<!--日志文件最大的大小 -->
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>2MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+
+	<logger name="nextone" level="DEBUG" />
+
+	<logger name="druid.sql" level="INFO" />
+	<logger name="druid.sql.DataSource" level="INFO" />
+	<logger name="druid.sql.Connection" level="INFO" />
+	<logger name="druid.sql.Statement" level="INFO" />
+	<logger name="druid.sql.ResultSet" level="INFO" />
+
+	<logger name="org.dozer" level="WARN" />
+
+	<!-- project default level -->
+	<logger name="org.springframework" level="WARN" />
+	<logger name="org.springframework.web" level="INFO" />
+	<logger name="org.springframework.data" level="WARN" />
+	<logger name="org.springframework.core" level="WARN" />
+	<logger name="org.springframework.beans" level="WARN" />
+	<logger name="org.springframework.context" level="WARN" />
+	<logger name="org.springframework.orm" level="WARN" />
+
+	<logger name="org.directwebremoting" level="WARN" />
+	<logger name="org.apache.tiles" level="WARN" />
+
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

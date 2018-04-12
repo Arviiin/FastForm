@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchFormBean SearchFormname="nextone.master.DM21FormBean"   
+	<crudPgmCd>DM20</crudPgmCd>
+	<entityBean >nextone.master.bean.StudentBean</entityBean>
+</SearchFormBean>

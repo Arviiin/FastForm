@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.pfu.cn"
+xmlns="http://www.pfu.cn"
+elementFormDefault="qualified">
+	<xs:element name="BaseEntityBean">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="entityId" type="xs:string" />
+				<xs:element name="fields">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="field" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="inputType" type="xs:string" minOccurs="0" maxOccurs="1"  />
+										<xs:element name="readOnly" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="nullable" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+										<xs:element name="maxlength" type="xs:int" minOccurs="0" maxOccurs="1" />
+										<xs:element name="precision" type="xs:int" minOccurs="0" maxOccurs="1" />
+										<xs:element name="scale" type="xs:int" minOccurs="0" maxOccurs="1" />
+									</xs:all>
+									<xs:attribute name="fieldName" type="xs:string" use="required"/>
+									<xs:attribute name="fieldType" type="xs:string"  use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

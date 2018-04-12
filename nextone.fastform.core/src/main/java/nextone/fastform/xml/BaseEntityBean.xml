@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaseEntityBean>
+    <entityId>stuId</entityId>
+	<fields>
+		<field name="deviceCd">
+		    <inputType>CODE</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<maxlength>20</maxlength>
+		</field>
+		<field name="regCompCd">
+		    <inputType>CODE</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<maxlength>20</maxlength>
+		</field>
+			<field  name="pgmCd">
+		    <inputType>CODE</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<maxlength>100</maxlength>
+		    </field>
+			<field  name="createUserId">
+		    <inputType>HIDDEN</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<precision>8</precision>
+			<scale>0</scale>
+		</field>
+		
+			<field  name="createUserCd">
+		    <inputType>CODE</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<maxlength>20</maxlength>
+		</field>
+			<field  name="createUserNm">
+		    <inputType>TEXT</inputType>
+			<readOnly>true</readOnly>
+			<maxlength>999</maxlength>
+		</field>
+			<field  name="createDt">
+		    <inputType>DATETIME</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+		</field>
+		<field  name="updateUserId">
+		    <inputType>HIDDEN</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<precision>8</precision>
+			<scale>0</scale>
+		</field>
+		<field  name="updateUserCd">
+		    <inputType>CODE</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+			<maxlength>20</maxlength>
+		</field>
+		<field  name="updateUserNm">
+		    <inputType>TEXT</inputType>
+			<readOnly>true</readOnly>
+			<maxlength>999</maxlength>
+		</field>
+		<field  name="updateDt">
+		    <inputType>DATETIME</inputType>
+			<readOnly>true</readOnly>
+			<nullable>false</nullable>
+		</field>
+	</fields>
+</BaseEntityBean>
+	
